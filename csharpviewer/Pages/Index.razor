@@ -1,0 +1,233 @@
+﻿@page "/"
+@using System.Data;
+@using System.IO;
+@using System.Linq;
+@using System.Collections.Generic;
+
+@using LumenWorks.Framework.IO.Csv;
+@using OxyPlot;
+@using OxyPlot.Axes;
+@using OxyPlot.Series;
+@using OxyPlot.Blazor;
+
+<div>
+    <div id="container">
+        <label for="uploadFiles">Upload CSV file -- Note: the first row of the table must be the column headers!</label>
+        <InputFile accept="text/csv" id="uploadFile" OnChange="HandleSelection" />
+    </div>
+
+    <p id="errmsg" style="color: red; font-weight: bold;">@errmsg</p>
+
+@if (selectedFiles != null) {
+    @foreach (var file in selectedFiles) {
+        var isLoading = file.Data.Position > 0;
+
+        <div class="file-row">
+            <!-- File info -->
+            <div>
+                <h2>@file.Name</h2>
+                Size: <strong>@file.Size bytes</strong>;
+                Last modified: <strong>@file.LastModified.ToShortDateString()</strong>;
+                Type: <strong>@file.Type</strong>
+                Relative Path: <strong>@file.RelativePath</strong>
+            </div>
+
+            <!-- Upload button -->
+            <button class="btn btn-primary" @onclick="() => LoadFile(file)" disabled="@isLoading">
+                @if (!isLoading) {
+                    <span>Upload</span>
+                } else {
+                    <span>Uploaded @((100.0 * file.Data.Position / file.Size).ToString("0"))%</span>
+                }
+            </button>
+
+            <button id='factbtn' @onclick="() => menuZero()" disabled="@factBtnDisabled">Show data fact table</button>
+
+            <table style="border: 1px solid black;" >
+                @if (displayFactTable) {
+                    <tr>
+                    @for (int i = 0; i < headers.Length; i++) {
+                        <th scope="col">@headers[i].ToString()</th>
+                    }
+                    </tr>
+
+                    @for (int r = 0; r < data.Rows.Count; r++) 
+                    {
+                    <tr>
+                        @for (int c = 0; c < data.Columns.Count; c++) {
+                        <td>@data.Rows[r][c].ToString()</td>
+                        } 
+                    </tr>
+                    }
+                }
+
+                @if (displayAggregateTable) {
+
+                }
+            </table>
+
+
+            <br/><br/>
+            <img id="plotimg" style="border: 1px solid black;" width=500 height=500 />
+        </div>
+    }
+}
+</div>
+
+@code {
+    bool factBtnDisabled = true;
+
+    string errmsg = "";
+    bool displayFactTable = false;
+    bool displayAggregateTable = false;
+
+    DataTable data = new DataTable();  
+    object[] headers;
+
+    bool runprog = true;
+
+    List<int> drillaggregates = new List<int>();
+    //headermenu(headers);
+    //Console.Write("Enter initial aggregate column # (must be numeric values only): ");
+    int initagg;// = Convert.ToInt32(Console.ReadLine());
+    //drillaggregates.Add(initagg);
+    List<int> filters = new List<int>();
+    List<object> filterdata = new List<object>();
+
+    IFileListEntry[] selectedFiles;
+    const int MAX_FILE_SIZE = 1 * 1024 * 1024 * 1024;
+
+    void HandleSelection(IFileListEntry[] files) {
+        selectedFiles = files;
+        for (int i = 0; i < selectedFiles.Length; i++) {
+            if (selectedFiles[i].Size > MAX_FILE_SIZE) {
+                selectedFiles[i] = null;
+            }
+        }
+    }
+
+    async Task LoadFile(IFileListEntry file) {
+        try {
+            if (file != null) {// && file.Type == "text/csv") {
+                // So the UI updates to show progress
+                file.OnDataRead += (sender, eventArgs) => InvokeAsync(StateHasChanged);
+
+                // Just load into .NET memory to show it can be done
+                // Alternatively it could be saved to disk, or parsed in memory, or similar
+                //Console.WriteLine(file.Name);
+                var ms = new MemoryStream();
+                await file.Data.CopyToAsync(ms);
+
+                @using (var csvReader = new CsvReader(ms, false)) {  
+                    data.Load(csvReader);  
+                }
+                
+                headers = (object[])data.Rows[0].ItemArray.Clone();
+
+                data.Rows[0].Delete();
+                data.AcceptChanges();
+
+                factBtnDisabled = false;
+            } else {
+                Console.WriteLine("Incompatible file detected"); 
+            }
+        } catch { Console.WriteLine("Could not upload file"); }
+    }
+
+    void menuZero() {
+        displayAggregateTable = false;
+        displayFactTable = true;
+    }
+
+    void menuOne() {
+        displayAggregateTable = true;
+        displayFactTable = false;
+    }
+
+    void menuTwo() {
+        
+    }
+
+    void menuThree() {
+        displayAggregateTable = true;
+        displayFactTable = false;
+    }
+
+    void menuFour() {
+        displayAggregateTable = true;
+        displayFactTable = false;
+    }
+
+    void menuFive() {
+        
+    }
+
+    void menuSeven() {
+        drillaggregates.Clear();
+        displayAggregateTable = true;
+        displayFactTable = false;
+    }
+
+    void menuEight() {
+        filters.Clear();
+        filterdata.Clear();
+        displayAggregateTable = true;
+        displayFactTable = false;
+    }
+
+    void menuNine() {
+        displayAggregateTable = true;
+        displayFactTable = false;
+    }
+
+    void menuTen() {
+        displayAggregateTable = true;
+        displayFactTable = false;
+    }
+
+    static DataTable getaggregatetable(DataTable data, 
+    int[] drillaggregates = null, int[] filters = null, object[] filterdata = null) {
+        var filtertable = data.Copy();
+        
+        for (int i = 0; i < filters.Length; i++) {
+            for (int j = 0; j < filtertable.Rows.Count; j++) {
+                if (!filtertable.Rows[j][filters[i]].Equals(filterdata[i])) 
+                    filtertable.Rows[j].Delete();
+            }
+        }
+        filtertable.AcceptChanges();
+
+        var aggdata = filtertable.Copy();
+        for (int i = aggdata.Columns.Count; i --> 0;)
+            if (!drillaggregates.Contains(i)) aggdata.Columns.RemoveAt(i); 
+        return aggdata;
+    } 
+
+    static object[] getaggregateheaders(object[] headers, int[] drillaggregates = null) {
+        var aggheaders = new List<object>();
+        for (int i = 1; i < drillaggregates.Length; i++) {
+            aggheaders.Add(headers[drillaggregates[i]]);
+        }
+
+        aggheaders.Add(headers[drillaggregates[0]]);
+        return aggheaders.ToArray();
+    }
+
+    static void displayaggregatetable(DataTable data, object[] headers,
+    int[] drillaggregates = null, int[] filters = null, object[] filterdata = null) {
+        if (drillaggregates.Length == 1 && filters.Length == 0) {
+            double colsum = 0;
+            foreach (DataRow dr in data.Rows) colsum += Convert.ToDouble(dr.ItemArray[drillaggregates[0]]);
+            string[] curheaders = {"Summary", $"Sum of all {headers[drillaggregates[0]]}", "Record Count"};
+            string[] curtable = {"Summary", colsum.ToString(), data.Rows.Count.ToString()};
+            Console.WriteLine(string.Join(", ", curheaders));
+            Console.WriteLine(string.Join(", ", curtable));
+        } else {
+            var aggheaders = getaggregateheaders(headers, drillaggregates);
+            var aggdata = getaggregatetable(data, drillaggregates, filters, filterdata);
+
+            Console.WriteLine(string.Join(", ", aggheaders));
+            for (int i = 0; i < aggdata.Rows.Count; i++) Console.WriteLine(string.Join(", ", aggdata.Rows[i].ItemArray));
+        }
+    }
+}

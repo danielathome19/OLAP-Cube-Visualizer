@@ -1,0 +1,286 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "LumenWorksCsvReader/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LumenWorks.Framework.IO.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LumenWorks.Framework.IO.dll": {}
+        }
+      },
+      "NumSharp/0.20.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/NumSharp.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NumSharp.Core.dll": {}
+        }
+      },
+      "OxyPlot.Core/2.1.0-Preview1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/OxyPlot.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OxyPlot.dll": {}
+        }
+      },
+      "OxyPlot.WindowsForms/2.1.0-Preview1": {
+        "type": "package",
+        "dependencies": {
+          "OxyPlot.Core": "2.1.0-Preview1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OxyPlot.WindowsForms.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OxyPlot.WindowsForms.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LumenWorksCsvReader/4.0.0": {
+      "sha512": "CP6bPmDbmV5yT7YwfGxN8Agrdj0nB82b2UitfrnTghqyfF4DXD4UXl8MoCXBz4Ja17bUYqpEDd+qaavh7lwUxg==",
+      "type": "package",
+      "path": "lumenworkscsvreader/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/LumenWorks.Framework.IO.dll",
+        "lib/net20/LumenWorks.Framework.IO.pdb",
+        "lib/net20/LumenWorks.Framework.IO.xml",
+        "lib/net35/LumenWorks.Framework.IO.dll",
+        "lib/net35/LumenWorks.Framework.IO.pdb",
+        "lib/net35/LumenWorks.Framework.IO.xml",
+        "lib/net45/LumenWorks.Framework.IO.dll",
+        "lib/net45/LumenWorks.Framework.IO.pdb",
+        "lib/net45/LumenWorks.Framework.IO.xml",
+        "lib/net461/LumenWorks.Framework.IO.dll",
+        "lib/net461/LumenWorks.Framework.IO.pdb",
+        "lib/net461/LumenWorks.Framework.IO.xml",
+        "lib/netstandard1.3/LumenWorks.Framework.IO.dll",
+        "lib/netstandard1.3/LumenWorks.Framework.IO.pdb",
+        "lib/netstandard1.3/LumenWorks.Framework.IO.xml",
+        "lib/netstandard2.0/LumenWorks.Framework.IO.dll",
+        "lib/netstandard2.0/LumenWorks.Framework.IO.pdb",
+        "lib/netstandard2.0/LumenWorks.Framework.IO.xml",
+        "lumenworkscsvreader.4.0.0.nupkg.sha512",
+        "lumenworkscsvreader.nuspec"
+      ]
+    },
+    "NumSharp/0.20.5": {
+      "sha512": "4ovXO3cVFqiZSoLLFaYji1nxibLJdrZlZI74LCQWC4TpPZbwUOn6vn1hT8ueO+V7/AS5CNUXcwa76E+2AG+rKQ==",
+      "type": "package",
+      "path": "numsharp/0.20.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/NumSharp.Core.dll",
+        "lib/netstandard2.0/NumSharp.Core.pdb",
+        "numsharp.0.20.5.nupkg.sha512",
+        "numsharp.nuspec"
+      ]
+    },
+    "OxyPlot.Core/2.1.0-Preview1": {
+      "sha512": "RHP7AXyiVXArMIkdIbhf5SbcO5iXg3UPZmzI8y5HpxQq0nHDMFMvWDcd1v/zlhUCX5/uSCDLCl1xxd1V1OWBmQ==",
+      "type": "package",
+      "path": "oxyplot.core/2.1.0-preview1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OxyPlot_128.png",
+        "lib/net40/OxyPlot.dll",
+        "lib/net40/OxyPlot.xml",
+        "lib/net45/OxyPlot.dll",
+        "lib/net45/OxyPlot.xml",
+        "lib/netstandard1.0/OxyPlot.dll",
+        "lib/netstandard1.0/OxyPlot.xml",
+        "lib/netstandard2.0/OxyPlot.dll",
+        "lib/netstandard2.0/OxyPlot.xml",
+        "oxyplot.core.2.1.0-preview1.nupkg.sha512",
+        "oxyplot.core.nuspec"
+      ]
+    },
+    "OxyPlot.WindowsForms/2.1.0-Preview1": {
+      "sha512": "Vba2Kpbg9Y5+ywhGfu1JUBc/Lha8SoNivw+AfUOHse95opdCSz7+/gU4Z1ISZzwEeCbsFLziuXUH77s1OMoz2Q==",
+      "type": "package",
+      "path": "oxyplot.windowsforms/2.1.0-preview1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OxyPlot_128.png",
+        "lib/net40/OxyPlot.WindowsForms.dll",
+        "lib/net40/OxyPlot.WindowsForms.xml",
+        "lib/net45/OxyPlot.WindowsForms.dll",
+        "lib/net45/OxyPlot.WindowsForms.xml",
+        "lib/netcoreapp3.1/OxyPlot.WindowsForms.dll",
+        "lib/netcoreapp3.1/OxyPlot.WindowsForms.xml",
+        "oxyplot.windowsforms.2.1.0-preview1.nupkg.sha512",
+        "oxyplot.windowsforms.nuspec"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "LumenWorksCsvReader >= 4.0.0",
+      "NumSharp >= 0.20.5",
+      "OxyPlot.Core >= 2.1.0-Preview1",
+      "OxyPlot.WindowsForms >= 2.1.0-Preview1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Dan\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Google Drive\\Resources\\School\\College\\UW - Whitewater\\2020 - 2021\\0 Fall\\Advanced Databases\\Final Research Project\\Final Paper\\Final Project\\csplotter-timed-concurrent\\csplotter.csproj",
+      "projectName": "csplotter",
+      "projectPath": "D:\\Google Drive\\Resources\\School\\College\\UW - Whitewater\\2020 - 2021\\0 Fall\\Advanced Databases\\Final Research Project\\Final Paper\\Final Project\\csplotter-timed-concurrent\\csplotter.csproj",
+      "packagesPath": "C:\\Users\\Dan\\.nuget\\packages\\",
+      "outputPath": "D:\\Google Drive\\Resources\\School\\College\\UW - Whitewater\\2020 - 2021\\0 Fall\\Advanced Databases\\Final Research Project\\Final Paper\\Final Project\\csplotter-timed-concurrent\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Dan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "LumenWorksCsvReader": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "NumSharp": {
+            "target": "Package",
+            "version": "[0.20.5, )"
+          },
+          "OxyPlot.Core": {
+            "target": "Package",
+            "version": "[2.1.0-Preview1, )"
+          },
+          "OxyPlot.WindowsForms": {
+            "target": "Package",
+            "version": "[2.1.0-Preview1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "csplotter/1.0.0": {
+        "dependencies": {
+          "LumenWorksCsvReader": "4.0.0",
+          "NumSharp": "0.20.5",
+          "OxyPlot.Core": "2.1.0-Preview1",
+          "OxyPlot.WindowsForms": "2.1.0-Preview1"
+        },
+        "runtime": {
+          "csplotter.dll": {}
+        }
+      },
+      "LumenWorksCsvReader/4.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/LumenWorks.Framework.IO.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "NumSharp/0.20.5": {
+        "dependencies": {
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NumSharp.Core.dll": {
+            "assemblyVersion": "0.20.5.0",
+            "fileVersion": "0.20.5.0"
+          }
+        }
+      },
+      "OxyPlot.Core/2.1.0-Preview1": {
+        "runtime": {
+          "lib/netstandard2.0/OxyPlot.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "OxyPlot.WindowsForms/2.1.0-Preview1": {
+        "dependencies": {
+          "OxyPlot.Core": "2.1.0-Preview1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OxyPlot.WindowsForms.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "System.Memory/4.5.3": {},
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {}
+    }
+  },
+  "libraries": {
+    "csplotter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LumenWorksCsvReader/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CP6bPmDbmV5yT7YwfGxN8Agrdj0nB82b2UitfrnTghqyfF4DXD4UXl8MoCXBz4Ja17bUYqpEDd+qaavh7lwUxg==",
+      "path": "lumenworkscsvreader/4.0.0",
+      "hashPath": "lumenworkscsvreader.4.0.0.nupkg.sha512"
+    },
+    "NumSharp/0.20.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4ovXO3cVFqiZSoLLFaYji1nxibLJdrZlZI74LCQWC4TpPZbwUOn6vn1hT8ueO+V7/AS5CNUXcwa76E+2AG+rKQ==",
+      "path": "numsharp/0.20.5",
+      "hashPath": "numsharp.0.20.5.nupkg.sha512"
+    },
+    "OxyPlot.Core/2.1.0-Preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RHP7AXyiVXArMIkdIbhf5SbcO5iXg3UPZmzI8y5HpxQq0nHDMFMvWDcd1v/zlhUCX5/uSCDLCl1xxd1V1OWBmQ==",
+      "path": "oxyplot.core/2.1.0-preview1",
+      "hashPath": "oxyplot.core.2.1.0-preview1.nupkg.sha512"
+    },
+    "OxyPlot.WindowsForms/2.1.0-Preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vba2Kpbg9Y5+ywhGfu1JUBc/Lha8SoNivw+AfUOHse95opdCSz7+/gU4Z1ISZzwEeCbsFLziuXUH77s1OMoz2Q==",
+      "path": "oxyplot.windowsforms/2.1.0-preview1",
+      "hashPath": "oxyplot.windowsforms.2.1.0-preview1.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    }
+  }
+}

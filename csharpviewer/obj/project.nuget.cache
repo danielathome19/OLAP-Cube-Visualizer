@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "dgSpecHash": "gzaqCa5Tac56tUYTuaKM0TCTf2dSzlrm6LHT6g1/v/xCfntbZOUsR7A+dJid6wDybNodupjqy1Qhq9l0AVJ1pg==",
+  "success": true,
+  "projectFilePath": "D:\\Google Drive\\Resources\\School\\College\\UW - Whitewater\\2020 - 2021\\0 Fall\\Advanced Databases\\Final Research Project\\Final Paper\\Final Project\\csharpviewer\\csharpviewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dan\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\lumenworkscsvreader\\4.0.0\\lumenworkscsvreader.4.0.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.7\\microsoft.aspnetcore.authorization.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.7\\microsoft.aspnetcore.components.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.7\\microsoft.aspnetcore.components.analyzers.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.7\\microsoft.aspnetcore.components.forms.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.7\\microsoft.aspnetcore.components.web.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\3.2.1\\microsoft.aspnetcore.components.webassembly.3.2.1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.build\\3.2.1\\microsoft.aspnetcore.components.webassembly.build.3.2.1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\3.2.1\\microsoft.aspnetcore.components.webassembly.devserver.3.2.1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.httphandler\\3.2.0\\microsoft.aspnetcore.components.webassembly.httphandler.3.2.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.runtime\\3.2.0\\microsoft.aspnetcore.components.webassembly.runtime.3.2.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.7\\microsoft.aspnetcore.metadata.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.6\\microsoft.extensions.configuration.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6\\microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.6\\microsoft.extensions.configuration.binder.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.6\\microsoft.extensions.configuration.fileextensions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.1.6\\microsoft.extensions.configuration.json.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.7\\microsoft.extensions.dependencyinjection.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.6\\microsoft.extensions.fileproviders.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.6\\microsoft.extensions.fileproviders.physical.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.6\\microsoft.extensions.filesystemglobbing.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.logging\\3.1.6\\microsoft.extensions.logging.3.1.6.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.7\\microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.jsinterop\\3.1.7\\microsoft.jsinterop.3.1.7.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.1\\microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\numsharp\\0.20.5\\numsharp.0.20.5.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\oxyplot.blazor\\1.0.0\\oxyplot.blazor.1.0.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\oxyplot.core\\2.1.0-preview1\\oxyplot.core.2.1.0-preview1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\oxyplot.windowsforms\\2.0.0\\oxyplot.windowsforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.net.http.json\\3.2.0\\system.net.http.json.3.2.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.text.encodings.web\\4.7.1\\system.text.encodings.web.4.7.1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'OxyPlot.WindowsForms 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "OxyPlot.WindowsForms",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    }
+  ]
+}

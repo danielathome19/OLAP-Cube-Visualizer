@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="D:\Google Drive\Resources\School\College\UW - Whitewater\2020 - 2021\0 Fall\Advanced Databases\Final Research Project\Final Paper\Final Project\csharpviewer\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="_content/BlazorInputFile" Path="C:\Users\Dan\.nuget\packages\blazorinputfile\0.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/OxyPlot.Blazor" Path="C:\Users\Dan\.nuget\packages\oxyplot.blazor\1.0.0\build\..\staticwebassets\" />
+</StaticWebAssets>

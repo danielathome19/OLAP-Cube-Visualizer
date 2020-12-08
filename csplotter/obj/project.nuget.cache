@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "K16f0UH9072kLBiNMUFVt3+VYYc3P09/TZUzMr8b4Qna73qZ/k0GsbnK9FLe3Yv2zeSqNl8MND8YYeFy95X0hg==",
+  "success": true,
+  "projectFilePath": "D:\\Google Drive\\Resources\\School\\College\\UW - Whitewater\\2020 - 2021\\0 Fall\\Advanced Databases\\Final Research Project\\Final Paper\\Final Project\\csplotter\\csplotter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dan\\.nuget\\packages\\lumenworkscsvreader\\4.0.0\\lumenworkscsvreader.4.0.0.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\numsharp\\0.20.5\\numsharp.0.20.5.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\oxyplot.core\\2.1.0-preview1\\oxyplot.core.2.1.0-preview1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\oxyplot.windowsforms\\2.1.0-preview1\\oxyplot.windowsforms.2.1.0-preview1.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Dan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
