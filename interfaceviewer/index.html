@@ -31,6 +31,14 @@
             display: inline-block;
             color: #000000;
         }
+
+        table, 
+        th, 
+        td { 
+            border: 1px solid black; 
+            border-collapse: collapse; 
+            padding: 6px; 
+        } 
     </style>
 	<body>
         <label for="data">Upload CSV file -- Note: the first row of the table must be the column headers!</label>
@@ -77,16 +85,7 @@
         </table>
 
         <br/><br/>
-        <table id='maintable' style="border: 1px solid black; float: left;" >
-            <th>
-                <td>test</td>
-            </th>
-            <tr>
-                <td>tyest</td>
-            </tr>
-            <!-- <th> <td>... <td>... -->
-            <!-- <tr> <td>... <td>... -->
-            <!-- <tr> <td>... <td>... -->
+        <table id='maintable' style="border: 1px solid black; float: left;display:table-header-group;" >
         </table>
         
         <img id="plotimg" style="border: 1px solid black; float: right;" width=500 height=500 />
@@ -111,22 +110,56 @@
         }
         */
 
-        async function SavePhoto(inp) {
-            //let user = { name:'john', age:34 };
-            let formData = new FormData();
-            let photo = inp.files[0];      
-                
-            formData.append("photo", photo);
-            //formData.append("user", JSON.stringify(user));  
-            
-            try {
-            let r = await fetch('/upload/image', {method: "POST", body: formData}); 
-            console.log('HTTP response code:',r.status); 
-            } catch(e) {
-            console.log('Huston we have problem...:', e);
+        function factTableFromArray(data) {
+            //maintable
+            /*
+            var ul = document.getElementById("list");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode("Four"));
+            ul.appendChild(li);
+            */
+            var table = document.getElementById("maintable");
+            for(var i = 0; i < data.length; i++) {
+                var row = data[i];
+                var tr = document.createElement("tr");
+                for(var j = 0; j < row.length; j++) {
+                    //display("cube[" + i + "][" + j + "] = " + cube[j]);
+                    if (i == 0) {
+                        var td = document.createElement("th");
+                        td.appendChild(document.createTextNode(row[j].toString()));
+                        tr.appendChild(td);
+                    } else {
+                        var td = document.createElement("td");
+                        td.appendChild(document.createTextNode(row[j].toString()));
+                        tr.appendChild(td);
+                    }
+                }
+                if (i == 0) {
+                    tr.style.backgroundColor = "#63639c";
+                    tr.style.color = "white"; 
+                } else {
+                    if (i % 2 == 1) tr.style.backgroundColor = "#e0e0eb"; 
+                }
+                table.appendChild(tr);
             }
-            
+            table.deleteRow(table.rows.length - 1);
         }
+
+        const readUploadedFileAsText = (inputFile) => {
+            const temporaryFileReader = new FileReader();
+
+            return new Promise((resolve, reject) => {
+                temporaryFileReader.onerror = () => {
+                temporaryFileReader.abort();
+                reject(new DOMException("Problem parsing input file."));
+                };
+
+                temporaryFileReader.onload = () => {
+                resolve(temporaryFileReader.result);
+                };
+                temporaryFileReader.readAsText(inputFile);
+            });
+        };
 
         async function submitcsv(inp) {
             btn0 = document.getElementById("btn0");
@@ -136,15 +169,14 @@
             //alert(upload.getType())
             upload.doUpload();
             btn0.disabled = false;
+            csvstring = await readUploadedFileAsText(inp.files[0]);
+            //console.log(csvstring);
+            csvdata = CSVToArray(csvstring, ",");
+            //console.log(csvdata);
+            factTableFromArray(csvdata);
         }
  
         function button0() { // Display Fact Table
-            /*
-            var ul = document.getElementById("list");
-            var li = document.createElement("li");
-            li.appendChild(document.createTextNode("Four"));
-            ul.appendChild(li);
-            */
             text = "menu0";
             $.ajax({
                 url: "http://localhost:5000/",
@@ -152,6 +184,7 @@
                 data: {message: text},
                 success: function(response) {
                     console.log(response);
+                    factTableFromArray(response);
                 },
                 error: function(xhr) {
                     console.log(xhr);
@@ -259,6 +292,103 @@
             $(progress_bar_id + " .progress-bar").css("width", +percent + "%");
             $(progress_bar_id + " .status").text(percent + "%");
         };
+    </script>
+    <script type="text/javascript">
+        function readFileAsString(file) {
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                //console.log('File content:', event.target.result);
+                return event.target.result;
+            };
+            reader.readAsText(file  );
+        }
+        // ref: http://stackoverflow.com/a/1293163/2343
+        // This will parse a delimited string into an array of
+        // arrays. The default delimiter is the comma, but this
+        // can be overriden in the second argument.
+        function CSVToArray( strData, strDelimiter ){
+            // Check to see if the delimiter is defined. If not,
+            // then default to comma.
+            strDelimiter = (strDelimiter || ",");
+    
+            // Create a regular expression to parse the CSV values.
+            var objPattern = new RegExp(
+                (
+                    // Delimiters.
+                    "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+    
+                    // Quoted fields.
+                    "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+    
+                    // Standard fields.
+                    "([^\"\\" + strDelimiter + "\\r\\n]*))"
+                ),
+                "gi"
+                );
+    
+    
+            // Create an array to hold our data. Give the array
+            // a default empty first row.
+            var arrData = [[]];
+    
+            // Create an array to hold our individual pattern
+            // matching groups.
+            var arrMatches = null;
+    
+    
+            // Keep looping over the regular expression matches
+            // until we can no longer find a match.
+            while (arrMatches = objPattern.exec( strData )){
+    
+                // Get the delimiter that was found.
+                var strMatchedDelimiter = arrMatches[ 1 ];
+    
+                // Check to see if the given delimiter has a length
+                // (is not the start of string) and if it matches
+                // field delimiter. If id does not, then we know
+                // that this delimiter is a row delimiter.
+                if (
+                    strMatchedDelimiter.length &&
+                    strMatchedDelimiter !== strDelimiter
+                    ){
+    
+                    // Since we have reached a new row of data,
+                    // add an empty row to our data array.
+                    arrData.push( [] );
+    
+                }
+    
+                var strMatchedValue;
+    
+                // Now that we have our delimiter out of the way,
+                // let's check to see which kind of value we
+                // captured (quoted or unquoted).
+                if (arrMatches[ 2 ]){
+    
+                    // We found a quoted value. When we capture
+                    // this value, unescape any double quotes.
+                    strMatchedValue = arrMatches[ 2 ].replace(
+                        new RegExp( "\"\"", "g" ),
+                        "\""
+                        );
+    
+                } else {
+    
+                    // We found a non-quoted value.
+                    strMatchedValue = arrMatches[ 3 ];
+    
+                }
+    
+    
+                // Now that we have our value string, let's add
+                // it to the data array.
+                arrData[ arrData.length - 1 ].push( strMatchedValue );
+            }
+    
+            // Return the parsed data.
+            return( arrData );
+        }
+    
     </script>
 </html>
 
