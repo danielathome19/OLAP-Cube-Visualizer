@@ -92,7 +92,10 @@ class Program {
             var aggdata = getaggregatetable(data, drillaggregates, filters, filterdata);
 
             WriteLine(string.Join(", ", aggheaders));
-            for (int i = 0; i < aggdata.Rows.Count; i++) WriteLine(string.Join(", ", aggdata.Rows[i].ItemArray));
+            Parallel.ForEach(aggdata.AsEnumerable(), dr => {
+                WriteLine(string.Join(", ", dr.ItemArray));
+            });
+            //for (int i = 0; i < aggdata.Rows.Count; i++) WriteLine(string.Join(", ", aggdata.Rows[i].ItemArray));
         }
     }
 
@@ -129,7 +132,10 @@ class Program {
                 if (menuoption == 0) {          // Display Fact Table
                     var watch = Stopwatch.StartNew();
                     WriteLine(string.Join(",", headers));
-                    for (int i = 0; i < data.Rows.Count; i++) WriteLine(string.Join(", ", data.Rows[i].ItemArray));
+                    //for (int i = 0; i < data.Rows.Count; i++) WriteLine(string.Join(", ", data.Rows[i].ItemArray));
+                    Parallel.ForEach(data.AsEnumerable(), dr => {
+                        WriteLine(string.Join(", ", dr.ItemArray));
+                    });
                     watch.Stop();
                     WriteLine("Execution time in seconds: {0}", watch.Elapsed.TotalSeconds);
                 } else if (menuoption == 1) {   // Display Aggregated Table
