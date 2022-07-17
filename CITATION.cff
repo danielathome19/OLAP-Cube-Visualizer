@@ -8,6 +8,7 @@ title: "OLAP-Cube-Visualizer"
 version: 1.0.0
 doi: 10.48550/arxiv.2101.00170
 date-released: 2020-11-01
+license: Apache-2.0
 url: "https://github.com/danielathome19/OLAP-Cube-Visualizer"
 preferred-citation:
   authors:
@@ -18,4 +19,5 @@ preferred-citation:
   version: 1.0.0
   doi: 10.48550/arxiv.2101.00171
   date-released: 2020-12-08
+  license: Apache-2.0
   url: "https://github.com/danielathome19/OLAP-Cube-Visualizer"
