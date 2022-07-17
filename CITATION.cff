@@ -6,6 +6,16 @@ authors:
   orcid: "https://orcid.org/0000-0002-0350-5771"
 title: "OLAP-Cube-Visualizer"
 version: 1.0.0
-doi: 10.48550/arxiv.2101.00171
-date-released: 2020-12-08
+doi: 10.48550/arxiv.2101.00170
+date-released: 2020-11-01
 url: "https://github.com/danielathome19/OLAP-Cube-Visualizer"
+preferred-citation:
+  authors:
+  - family-names: "Szelogowski"
+    given-names: "Daniel"
+    orcid: "https://orcid.org/0000-0002-0350-5771"
+  title: "OLAP-Cube-Visualizer"
+  version: 1.0.0
+  doi: 10.48550/arxiv.2101.00171
+  date-released: 2020-12-08
+  url: "https://github.com/danielathome19/OLAP-Cube-Visualizer"
