@@ -1,8 +1,8 @@
 # About
 This repository contains multiple variants of this project; the primary algorithm allows for data cube operations to be performed using lightweight functions with ease of usability to provide speed, efficiency, and assist in reducing data oversimplification as found in other OLAP cube viewers.
 To find out more, check out the provided research papers:
-  * "Optimizing Data Cube Visualization for Web Applications.pdf" (DOI: 10.48550/arxiv.2101.00171)
-  * "Visualization Techniques with Data Cubes.pdf" (DOI: 10.48550/arxiv.2101.00170)
+  * "Optimizing Data Cube Visualization for Web Applications.pdf" (DOI: [10.48550/arxiv.2101.00171](https://doi.org/10.48550/arxiv.2101.00171))
+  * "Visualization Techniques with Data Cubes.pdf" (DOI: [10.48550/arxiv.2101.00170](https://doi.org/10.48550/arxiv.2101.00170))
 
 # Usage
 The folders "csharpviewer", "cshoster", "golangviewer", and "interfaceviewer" contain unfinished projects; these are detailed in the paper "Optimizing Data Cube Visualization for Web Applications".
