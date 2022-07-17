@@ -30,7 +30,7 @@ Please use the issue tracker for the following purpose:
   * To suggest new features or structures or applications.
 
 # Citation
-If you use this code for your research, please cite this project as either (Optimizing Data Cube Visualization for Web Applications):
+If you use this code for your research, please cite this project as either (**Optimizing Data Cube Visualization for Web Applications**):
 ```
 @software{Szelogowski_OLAP-Cube-Visualizer_2020,
  author = {Szelogowski, Daniel},
@@ -43,7 +43,7 @@ If you use this code for your research, please cite this project as either (Opti
  year = {2020}
 }
 ```
-or (Visualization Techniques with Data Cubes):
+or (**Visualization Techniques with Data Cubes**):
 ```
 @software{Szelogowski_OLAP-Cube-Visualizer_2020,
  author = {Szelogowski, Daniel},
