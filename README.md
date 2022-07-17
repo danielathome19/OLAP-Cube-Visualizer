@@ -37,6 +37,7 @@ If you use this code for your research, please cite this project as either (Opti
  doi = {10.48550/arxiv.2101.00171},
  month = {12},
  title = {{OLAP-Cube-Visualizer}},
+ license = {Apache-2.0},
  url = {https://github.com/danielathome19/OLAP-Cube-Visualizer},
  version = {1.0.0},
  year = {2020}
@@ -49,6 +50,7 @@ or (Visualization Techniques with Data Cubes):
  doi = {10.48550/arxiv.2101.00170},
  month = {11},
  title = {{OLAP-Cube-Visualizer}},
+ license = {Apache-2.0},
  url = {https://github.com/danielathome19/OLAP-Cube-Visualizer},
  version = {1.0.0},
  year = {2020}
