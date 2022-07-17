@@ -29,13 +29,16 @@ Please use the issue tracker for the following purpose:
   * To suggest any improvements in existing features.
   * To suggest new features or structures or applications.
 
+# License
+The code is licensed under Apache License 2.0.
+
 # Citation
 If you use this code for your research, please cite this project as either (**Optimizing Data Cube Visualization for Web Applications**):
 ```
 @software{Szelogowski_OLAP-Cube-Visualizer_2020,
  author = {Szelogowski, Daniel},
  doi = {10.48550/arxiv.2101.00171},
- month = {12},
+ month = {Dec},
  title = {{OLAP-Cube-Visualizer}},
  license = {Apache-2.0},
  url = {https://github.com/danielathome19/OLAP-Cube-Visualizer},
@@ -48,7 +51,7 @@ or (**Visualization Techniques with Data Cubes**):
 @software{Szelogowski_OLAP-Cube-Visualizer_2020,
  author = {Szelogowski, Daniel},
  doi = {10.48550/arxiv.2101.00170},
- month = {11},
+ month = {Nov},
  title = {{OLAP-Cube-Visualizer}},
  license = {Apache-2.0},
  url = {https://github.com/danielathome19/OLAP-Cube-Visualizer},
