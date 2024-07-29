@@ -34,7 +34,7 @@ The code is licensed under Apache License 2.0.
 
 # Citation
 If you use this code for your research, please cite this project as either (**Optimizing Data Cube Visualization for Web Applications**):
-```
+```bibtex
 @software{Szelogowski_OLAP-Cube-Visualizer_2020,
  author = {Szelogowski, Daniel},
  doi = {10.48550/arxiv.2101.00171},
@@ -47,7 +47,7 @@ If you use this code for your research, please cite this project as either (**Op
 }
 ```
 or (**Visualization Techniques with Data Cubes**):
-```
+```bibtex
 @software{Szelogowski_OLAP-Cube-Visualizer_2020,
  author = {Szelogowski, Daniel},
  doi = {10.48550/arxiv.2101.00170},
